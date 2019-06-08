@@ -3,19 +3,18 @@ import ReactDOM from 'react-dom';
 // import update from 'immutability-helper';
 // var classNames = require('classnames');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClock } from '@fortawesome/fontawesome-free-solid';
 
-export default class Home extends Component {
+export default class CategoriesPage extends Component {
 	constructor() {
 		super();
 		this.state = {};
 	}
 
 	render() {
+		const { match, location, history } = this.props;
 		return (
 			<div id={'listings-container'}>
-				<h1>Listings Page</h1>
+				City: {match.params.city} category: {match.params.category}
 			</div>
 		);
 	}

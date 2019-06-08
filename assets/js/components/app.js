@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 // var classNames = require('classnames');
 import Header from './Header/Header';
 import Home from './Pages/Home/Home';
-import Listings from './Pages/Listings/Listings';
+import ListingsPage from './Pages/ListingsPage/ListingsPage';
+import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
+import CitiesPage from './Pages/CitiesPage/CitiesPage';
 
 export default class App extends Component {
 	constructor() {
@@ -20,7 +22,13 @@ export default class App extends Component {
 					<Header />
 					<div className="body">
 						<Route exact path="/" component={Home} />
-						<Route exact path="/stl/community/artists" component={Listings} />
+						<Route exact path="/:city" component={CitiesPage} />
+						<Route exact path="/:city/:category" component={CategoriesPage} />
+						<Route
+							exact
+							path="/:city/:category/:listings"
+							component={ListingsPage}
+						/>
 					</div>
 				</div>
 			</Router>
