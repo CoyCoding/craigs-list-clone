@@ -5,6 +5,7 @@
 body {
   line-height: 1;
   background: white;
+  text-shadow: #191919 0 0 10px;
 }
 
 ol,
@@ -66,12 +67,19 @@ span{
     display: grid;
     width: 100%;
     grid-template-columns: repeat(7, 1fr);
-        padding: 40px 20px;
+        padding: 20px 20px;
             background: #1818188a;
     .category-box{
+      &:not(:last-child){
+        border-right: solid grey 1px;
+      }
       .title{
         text-align: center;
-        padding: 10px 0;
+            margin-bottom: 20px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-transform: uppercase;
       }
       .link-box{
         display: grid;
@@ -79,6 +87,7 @@ span{
         .link{
           text-align: center;
           margin: 10px;
+          text-transform: capitalize;
         }
       }
     }
