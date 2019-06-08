@@ -1,0 +1,1 @@
+#home-container{display:-ms-flexbox;display:flex;-ms-flex-pack:space-evenly;justify-content:space-evenly;-ms-flex-direction:column;flex-direction:column;-ms-flex-align:center;align-items:center;color:white;height:calc(100vh - 77px);margin:0 20px}#home-container h1{font-size:4rem;font-weight:400;text-align:center;line-height:1.2;text-transform:capitalize}
