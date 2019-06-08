@@ -49,6 +49,13 @@ export default class App extends Component {
 		});
 	};
 
+	loadTags = () => {
+		const tags = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+		return tags.map((tag, index) => {
+			return <div key={index}>Macbook Pro</div>;
+		});
+	};
+
 	render() {
 		return (
 			<div id={'home-container'}>
@@ -66,8 +73,11 @@ export default class App extends Component {
 						placeholder="search"
 					/>
 					<div className="trending-title">
-						<FontAwesomeIcon icon="clock" />
+						<p>
+							<FontAwesomeIcon icon="clock" /> Now Trending
+						</p>
 					</div>
+					<div class="trending-items">{this.loadTags()}</div>
 				</section>
 			</div>
 		);
