@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import update from 'immutability-helper';
 var classNames = require('classnames');
+import Header from './Header';
 
 export default class App extends Component {
 	constructor() {
@@ -11,7 +12,9 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div className={'container'}>This is the still home changed page</div>
+			<div className={'container'}>
+				<Header />
+			</div>
 		);
 	}
 }
