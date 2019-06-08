@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 // import update from 'immutability-helper';
 // var classNames = require('classnames');
+import Categories from './Categories/Categories';
+import Trending from './Trending/Trending';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faClock } from '@fortawesome/fontawesome-free-solid';
 
-export default class App extends Component {
+export default class Home extends Component {
 	constructor() {
 		super();
 		this.state = {};
@@ -60,25 +62,12 @@ export default class App extends Component {
 		return (
 			<div id={'home-container'}>
 				<h1>
-					Surf the Web
+					Surf the Web,
 					<br />
 					Sail the Yard
 				</h1>
-				<section id={'categories'}>{this.loadCategories()}</section>
-				<section id="trending">
-					<input
-						type="text"
-						name="search"
-						className="seach"
-						placeholder="search"
-					/>
-					<div className="trending-title">
-						<p>
-							<FontAwesomeIcon icon="clock" /> Now Trending
-						</p>
-					</div>
-					<div class="trending-items">{this.loadTags()}</div>
-				</section>
+				<Categories />
+				<Trending />
 			</div>
 		);
 	}
