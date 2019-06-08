@@ -1,0 +1,41 @@
+header{
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  .left-menu{
+    display: flex;
+    flex-direction: row;
+    .logo{
+      font-size: 2rem;
+    }
+    .city-dropdown{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      span{
+        padding: 0px 10px;
+      }
+    }
+  }
+  .right-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .user-img{
+      padding: 10px 20px;
+    }
+    .user-dropdown{
+      padding: 10px 20px;
+      span{
+          padding: 0px 10px;
+      }
+    }
+    .post-btn{
+      padding: 10px 20px;
+      background: lightblue;
+    }
+  }
+}
