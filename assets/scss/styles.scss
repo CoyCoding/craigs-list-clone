@@ -47,7 +47,9 @@ span{
   font-size: 5rem;
   color: white;
 }
-
+.body{
+    padding-top: 77px;
+}
 
 
 #home-container{
@@ -56,7 +58,6 @@ span{
   flex-direction: column;
   align-items: center;
   color: white;
-  padding-top: 77px;
   height: 100vh;
   margin: 0 20px;
   h1{
