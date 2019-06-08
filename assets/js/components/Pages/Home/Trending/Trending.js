@@ -40,5 +40,5 @@ export default class Home extends Component {
 }
 
 const TrendingSearches = props => {
-	return <div class="trending-items">{props.trendingTags()}</div>;
+	return <div className="trending-items">{props.trendingTags()}</div>;
 };
