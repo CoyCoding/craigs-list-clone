@@ -40,10 +40,47 @@ body {
 }
 
 h1 {
-  font-weight: 100;
-  font-size: 50px;
+
 }
 span{
   font-size: 5rem;
   color: white;
+}
+
+
+
+#home-container{
+  display: flex;
+      justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 77px;
+  height: 100vh;
+  margin: 0 20px;
+  h1{
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  #categories{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+        padding: 40px 20px;
+            background: #1818188a;
+    .category-box{
+      .title{
+        text-align: center;
+        padding: 10px 0;
+      }
+      .link-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .link{
+          text-align: center;
+          margin: 10px;
+        }
+      }
+    }
+  }
 }

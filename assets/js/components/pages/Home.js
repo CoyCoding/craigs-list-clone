@@ -51,7 +51,7 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div className={'container'}>
+			<div id={'home-container'}>
 				<h1>
 					Surf the Web
 					<br />
