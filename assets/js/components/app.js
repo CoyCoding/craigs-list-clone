@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home';
 import ListingsPage from './Pages/ListingsPage/ListingsPage';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import CitiesPage from './Pages/CitiesPage/CitiesPage';
+import ItemPage from './Pages/ItemPage/ItemPage';
 
 export default class App extends Component {
 	constructor() {
@@ -28,6 +29,11 @@ export default class App extends Component {
 							exact
 							path="/:city/:category/:listings"
 							component={ListingsPage}
+						/>
+						<Route
+							exact
+							path="/:city/:category/:listings/:item"
+							component={ItemPage}
 						/>
 					</div>
 				</div>
