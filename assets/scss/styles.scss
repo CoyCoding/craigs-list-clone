@@ -4,7 +4,9 @@
 @import "./Home/categories";
 @import "./Home/trending";
 @import "./Home/home";
-
+*{
+    font-family: 'Roboto', sans-serif;
+}
 body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(rgba(0, 22, 100, 0.72), #02000d),url(../img/StLouis.jpg);
@@ -12,13 +14,13 @@ body {
   background-position: 10%;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding-top: 77px;
   line-height: 1;
-  background: white;
   text-shadow: #191919 0 0 10px;
-}
-
-span{
-  font-size: 5rem;
-  color: white;
+  .body{
+    padding-top: 77px;
+    span{
+      font-size: 5rem;
+      color: white;
+    }
+  }
 }
