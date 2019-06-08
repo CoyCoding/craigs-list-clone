@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import update from 'immutability-helper';
 var classNames = require('classnames');
 import Header from './Header';
+import Home from './pages/Home';
 
 export default class App extends Component {
 	constructor() {
@@ -14,6 +15,7 @@ export default class App extends Component {
 		return (
 			<div className={'container'}>
 				<Header />
+				<Home />
 			</div>
 		);
 	}

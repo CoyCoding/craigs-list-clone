@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 // import update from 'immutability-helper';
 // var classNames = require('classnames');
 import FontAwesomeIcon from 'react-fontawesome';
-import { faCoffee } from '@fortawesome/fontawesome-free-solid';
-//import { faHome } from '@fontawesome/free-solid-svg-icons';
 
 export default class Header extends Component {
 	constructor() {
