@@ -4,6 +4,8 @@
 @import "./Home/categories";
 @import "./Home/trending";
 @import "./Home/home";
+@import "./Listings/listings";
+
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -15,7 +17,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   line-height: 1;
-  text-shadow: #191919 0 0 10px;
+      text-shadow: #3f3f3f8a 0 0 10px;
   .body{
     padding-top: 77px;
     span{

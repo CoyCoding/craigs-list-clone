@@ -15,13 +15,15 @@ export default class PriceSelection extends Component {
 	render() {
 		return (
 			<div className={'price form-group'}>
-				<lable>Price</lable>
-				<select name="min-price" className="min-price">
-					<option value="0">0</option>
-				</select>
-				<select name="max-price" className="max-price">
-					<option value="1000">1000</option>
-				</select>
+				<label>Price</label>
+				<div className="price-selections">
+					<select name="min-price" className="min-price">
+						<option value="0">0</option>
+					</select>
+					<select name="max-price" className="max-price">
+						<option value="1000">1000</option>
+					</select>
+				</div>
 			</div>
 		);
 	}
