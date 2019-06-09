@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faClock } from '@fortawesome/fontawesome-free-solid';
 import PriceSelection from './Selections/PriceSelection';
+import MakeSelection from './Selections/MakeSelection';
+import ModelSelection from './Selections/ModelSelection';
+import Buttons from './Buttons/Buttons';
 
 export default class ListingsPage extends Component {
 	constructor() {
@@ -19,24 +22,9 @@ export default class ListingsPage extends Component {
 			<div id={'listings-container'}>
 				<section className={'item-filters'}>
 					<PriceSelection />
-					<div className={'make form-group'}>
-						<label>Make</label>
-						<select name="make" className="make">
-							<option value="Audi">Audi</option>
-							<option value="BMW">BMW</option>
-						</select>
-					</div>
-					<div className={'model form-group'}>
-						<label>model</label>
-						<select name="model" className="model">
-							<option value="M3">M3</option>
-							<option value="M5">M5</option>
-						</select>
-					</div>
-					<div className="filter-btns">
-						<div className="update-btn">Update</div>
-						<div className="reset-btn">Reset</div>
-					</div>
+					<MakeSelection />
+					<ModelSelection />
+					<Buttons />
 				</section>
 				<section className="item-list">
 					<section className="view-filters">
