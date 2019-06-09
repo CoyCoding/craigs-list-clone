@@ -12,10 +12,11 @@ export default class FilterSelection extends Component {
 		this.state = {};
 	}
 
-	render() {
-		return (
-			<section className="item-grid">
-				<div className="item">
+	loadItemsForGrid = () => {
+		const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+		return items.map((tag, index) => {
+			return (
+				<div key={index} className="item">
 					<div className="item-img">
 						<div>$Price</div>
 					</div>
@@ -29,7 +30,19 @@ export default class FilterSelection extends Component {
 						</div>
 					</div>
 				</div>
+			);
+		});
+	};
+
+	render() {
+		return (
+			<section className="item-grid">
+				<Item items={this.loadItemsForGrid} />
 			</section>
 		);
 	}
 }
+
+const Item = props => {
+	return <>{props.items()}</>;
+};
