@@ -2,6 +2,7 @@
   margin: 0 auto;
   max-width: 1240px;
   background: whitesmoke;
+  min-height: calc(100vh - 77px);
   .item-filters{
     display: flex;
     padding: 20px;
@@ -79,6 +80,7 @@
         position: relative;
         border-radius: 5px;
         overflow: hidden;
+        box-shadow: black 0 0 7px;
         .item-img{
           background: url(https://auto.ndtvimg.com/car-images/big/bmw/m2/bmw-m2.webp?v=1), #000000ad;
 height: 250px;
