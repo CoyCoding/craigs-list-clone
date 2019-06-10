@@ -1,94 +1,107 @@
-#listings-container{
+#listings-container {
   margin: 0 auto;
   max-width: 1240px;
   background: whitesmoke;
   min-height: calc(100vh - 77px);
-  .item-filters{
+
+  .item-filters {
     display: flex;
     padding: 20px;
-    .form-group{
+
+    .form-group {
       display: flex;
       flex-direction: column;
       margin-right: 100px;
 
-      &.price{
-        .price-selections{
-          select.min-price{
+      &.price {
+        .price-selections {
+          select.min-price {
             margin-right: 20px;
           }
         }
       }
 
-      &.model{
-            margin-right: auto;
+      &.model {
+        margin-right: auto;
       }
-      label{
+
+      label {
         margin-bottom: 20px;
         color: #666666;
         text-transform: uppercase;
-      font-size: 1.1rem;
-      font-weight: 600;
+        font-size: 1.1rem;
+        font-weight: 600;
       }
     }
 
-    .filter-btns{
+    .filter-btns {
       display: flex;
       align-items: center;
       position: relative;
       color: white;
       top: 5px;
-      div{
+
+      div {
         padding: 10px 20px;
         text-align: center;
         width: 95px;
         border-bottom: solid #0000008c 5px;
         cursor: pointer;
-        &.update-btn{
+
+        &.update-btn {
           background: #307e97;
           margin-right: 20px;
-          &:hover{
+
+          &:hover {
             background: #3d9dbc;
           }
         }
-        &.reset-btn{
+
+        &.reset-btn {
           padding: 10px 20px;
           background: #ea0053;
-          &:hover{
-            background: #d7001a;
 
+          &:hover {
+            background: #d7001a;
           }
         }
       }
-
-
     }
   }
-  .item-list{
+
+  .item-list {
     padding: 20px;
     border-top: black solid;
-    .view-filters{
-      .view-dropdown{
+
+    .view-filters {
+      .view-dropdown {
         margin-right: 20px;
       }
+      margin-right: 20px;
     }
-    .item-grid{
+
+    .item-grid {
       display: grid;
-          grid-template-columns: repeat(4, 1fr);
-              margin: 20px 0;
-      .item{
+      grid-template-columns: repeat(4, 1fr);
+      margin: 20px 0;
+      grid-gap: 10px;
+
+      .item {
         border: white solid 1px;
         position: relative;
         border-radius: 5px;
         overflow: hidden;
         box-shadow: black 0 0 7px;
-        .item-img{
+
+        .item-img {
           background: url(https://auto.ndtvimg.com/car-images/big/bmw/m2/bmw-m2.webp?v=1), #000000ad;
-height: 250px;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-position: relative;
-          div{
+          height: 250px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+
+          div {
             position: absolute;
             top: 10px;
             left: 10px;
@@ -98,34 +111,39 @@ position: relative;
             border-radius: 5px;
           }
         }
-        .info{
+
+        .info {
           display: flex;
           align-items: center;
-          padding: 10px 10px;
+          padding: 10px;
           border-top: white solid 1px;
           justify-content: space-between;
           color: white;
-              background: #0000003d;
-          h5{
+          background: #0000003d;
+          height: 80px;
+
+          h5 {
             margin-bottom: 10px;
-letter-spacing: .1rem;
-font-size: 1.1rem;
-font-weight: 600;
+            letter-spacing: 0.1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
           }
-          h6{
-            font-size: .9rem;
-    font-weight: 100;
+
+          h6 {
+            font-size: 0.9rem;
+            font-weight: 100;
           }
-          .favorite{
-              position: relative;
-              right: 0;
+
+          .favorite {
+            position: relative;
+            right: 0;
           }
         }
       }
     }
   }
 
-  select{
+  select {
     position: relative;
     border-radius: 5px;
     font-size: 1rem;
