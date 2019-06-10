@@ -33,8 +33,8 @@ export default class ItemPage extends Component {
 						<div className="gallery">
 							<div className="slider">
 								<div className="main-image">
-									<div className="left-arrow">{'<'}</div>
-									<div className="right-arrow">{'>'}</div>
+									<div className="left-arrow slide-selection">{'<'}</div>
+									<div className="right-arrow slide-selection">{'>'}</div>
 								</div>
 							</div>
 							<Thumbnails loadImages={this.loadImages} />
