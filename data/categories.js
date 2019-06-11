@@ -222,34 +222,5 @@ module.exports = [
         slug: 'writing'
       }
     ]
-  },
-  {
-    title: "gigs",
-    listings: [
-      {
-        name: 'computer',
-        slug: 'computer'
-      },
-      {
-        name: 'labor',
-        slug: 'labor'
-      },
-      {
-        name: 'creative',
-        slug: 'creative'
-      },
-      {
-        name: 'domestic',
-        slug: 'domestic'
-      },
-      {
-        name: 'security',
-        slug: 'security'
-      },
-      {
-        name: 'writing',
-        slug: 'writing'
-      }
-    ]
   }
 ]

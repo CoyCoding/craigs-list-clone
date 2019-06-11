@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
 @import "./Header/header";
-@import "./Home/categories";
-@import "./Home/trending";
-@import "./Home/home";
+
+@import "./City/City";
 @import "./Listings/listings";
 @import "./Item/item";
 *{

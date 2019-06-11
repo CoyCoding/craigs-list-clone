@@ -13,8 +13,9 @@ export default class Categories extends Component {
 	loadCategories = () => {
 		//if promise not resolved return loading
 		if (this.props.categoryInfo != '') {
-			//else loop categories dom nodes
+			//else loop categories mount each category node
 			return this.props.categoryInfo.map((category, index) => {
+				//for each listing in current category mount listings
 				let loopListings = () => {
 					return category.listings.map((listing, index) => {
 						return (

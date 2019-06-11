@@ -15,9 +15,11 @@ export default class CitiesPage extends Component {
 			city: ''
 		};
 	}
+
 	componentwillReciveprops(props) {
 		this.setState({ city: props.match.params.city });
 	}
+
 	componentWillMount() {
 		const self = this;
 		console.log(self.props);
@@ -38,13 +40,11 @@ export default class CitiesPage extends Component {
 		const { match, location, history } = this.props;
 		return (
 			<div id={'home-container'}>
-				<h1>
-					Surf the Web,
-					<br />
-					Sail the Yard
-				</h1>
-				<Categories categoryInfo={this.state.categoryData} />
-				<Trending />
+				<Categories
+					categoryInfo={this.state.categoryData}
+					city={this.state.city}
+				/>
+				<Trending city={this.state.city} />
 			</div>
 		);
 	}
