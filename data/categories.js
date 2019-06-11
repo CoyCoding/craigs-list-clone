@@ -3,39 +3,39 @@ module.exports = [
     title: "community",
     listings: [
       {
-        name: 'activities'
+        name: 'activities',
         slug: 'activities'
       },
       {
-        name: 'lost & found'
+        name: 'lost & found',
         slug: 'lost-found'
       },
       {
-        name: 'childcare'
+        name: 'childcare',
         slug: 'childcare'
       },
       {
-        name: 'classes'
+        name: 'classes',
         slug: 'classes'
       },
       {
-        name: 'local news'
+        name: 'local news',
         slug: 'local-news'
       },
       {
-        name: 'missed'
+        name: 'missed',
         slug: 'missed'
       },
       {
-        name: 'groups'
+        name: 'groups',
         slug: 'groups'
       },
       {
-        name: 'pets'
+        name: 'pets',
         slug: 'pets'
       },
       {
-        name: 'events'
+        name: 'events',
         slug: 'events'
       },
     ]
@@ -44,39 +44,39 @@ module.exports = [
     title: "housing",
     listings: [
       {
-        name: 'apt / housing'
+        name: 'apt / housing',
         slug: 'apt-housing'
       },
       {
-        name: 'home swap'
+        name: 'home swap',
         slug: 'home-swap'
       },
       {
-        name: 'housing wanted'
+        name: 'housing wanted',
         slug: 'housing-wanted'
       },
       {
-        name: 'office / commercial'
+        name: 'office / commercial',
         slug: 'office-commercial'
       },
       {
-        name: 'parking / storage'
+        name: 'parking / storage',
         slug: 'parking-storage'
       },
       {
-        name: 'for-sale'
+        name: 'for-sale',
         slug: 'for-sale'
       },
       {
-        name: 'rooms shared'
+        name: 'rooms shared',
         slug: 'rooms-shared'
       },
       {
-        name: 'rooms wanted'
+        name: 'rooms wanted',
         slug: 'rooms-wanted'
       },
       {
-        name: 'vacation rentals'
+        name: 'vacation rentals',
         slug: 'vacation-rentals'
       },
     ]
@@ -85,39 +85,39 @@ module.exports = [
     title: "services",
     listings: [
       {
-        name: 'automotive'
+        name: 'automotive',
         slug: 'automotive'
       },
       {
-        name: 'beauty'
+        name: 'beauty',
         slug: 'beauty'
       },
       {
-        name: 'cell / mobile'
+        name: 'cell / mobile',
         slug: 'cell-mobile'
       },
       {
-        name: 'computer'
+        name: 'computer',
         slug: 'computer'
       },
       {
-        name: 'cycle'
+        name: 'cycle',
         slug: 'cycle'
       },
       {
-        name: 'household'
+        name: 'household',
         slug: 'household'
       },
       {
-        name: 'labor'
+        name: 'labor',
         slug: 'labor'
       },
       {
-        name: 'legal'
+        name: 'legal',
         slug: 'legal'
       },
       {
-        name: 'pet'
+        name: 'pet',
         slug: 'pet'
       },
     ]
@@ -126,80 +126,80 @@ module.exports = [
     title: "for-sale",
     listings: [
       {
-        name: 'antiques'
+        name: 'antiques',
         slug: 'antiques'
       },
       {
-        name: 'appliances'
+        name: 'appliances',
         slug: 'appliances'
       },
       {
-        name: 'aviation'
+        name: 'aviation',
         slug: 'aviation'
       },
       {
-        name: 'barter'
+        name: 'barter',
         slug: 'barter'
       },
       {
-        name: 'beauty'
+        name: 'beauty',
         slug: 'beauty'
       },
       {
-        name: 'bikes'
+        name: 'bikes',
         slug: 'bikes'
       },
       {
-        name: 'boats'
+        name: 'boats',
         slug: 'boats'
       },
       {
-        name: 'books'
+        name: 'books',
         slug: 'books'
       },
       {
-        name: 'cars & trucks'
+        name: 'cars & trucks',
         slug: 'cars-trucks'
       },
     ]
   },
   {
-    title: "discussion forms",
+    title: "discussion-forms",
     listings: [
       {
-        name: 'android'
+        name: 'android',
         slug: 'android'
       },
       {
-        name: 'art'
+        name: 'art',
         slug: 'art'
       },
       {
-        name: 'automotive'
+        name: 'automotive',
         slug: 'automotive'
       },
       {
-        name: 'beauty'
+        name: 'beauty',
         slug: 'beauty'
       },
       {
-        name: 'jokes'
+        name: 'jokes',
         slug: 'jokes'
       },
       {
-        name: 'legal'
+        name: 'legal',
         slug: 'legal'
       },
       {
-        name: 'haiku'
+        name: 'haiku',
         slug: 'haiku'
       },
       {
-        name: 'housing'
+        name: 'housing',
         slug: 'housing'
       },
       {
-        name: 'tv'
+        name: 'tv',
         slug: 'tv'
       },
     ]
@@ -208,39 +208,39 @@ module.exports = [
     title: "Jobs",
     listings: [
       {
-        name: 'admin'
+        name: 'admin',
         slug: 'admin'
       },
       {
-        name: 'arch / engineering'
+        name: 'arch / engineering',
         slug: 'arch-engineering'
       },
       {
-        name: 'customer service'
+        name: 'customer service',
         slug: 'customer-service'
       },
       {
-        name: 'office / commercial'
+        name: 'office / commercial',
         slug: 'office-commercial'
       },
       {
-        name: 'parking / storage'
+        name: 'parking / storage',
         slug: 'parking-storage'
       },
       {
-        name: 'security'
+        name: 'security',
         slug: 'security'
       },
       {
-        name: 'sales'
+        name: 'sales',
         slug: 'sales'
       },
       {
-        name: 'software'
+        name: 'software',
         slug: 'software'
       },
       {
-        name: 'writing'
+        name: 'writing',
         slug: 'writing'
       }
     ]
@@ -249,31 +249,31 @@ module.exports = [
     title: "gigs",
     listings: [
       {
-        name: 'computer'
+        name: 'computer',
         slug: 'computer'
       },
       {
-        name: 'labor'
+        name: 'labor',
         slug: 'labor'
       },
       {
-        name: 'event'
+        name: 'event',
         slug: 'event'
       },
       {
-        name: 'creative'
+        name: 'creative',
         slug: 'creative'
       },
       {
-        name: 'domestic'
+        name: 'domestic',
         slug: 'domestic'
       },
       {
-        name: 'security'
+        name: 'security',
         slug: 'security'
       },
       {
-        name: 'writing'
+        name: 'writing',
         slug: 'writing'
       }
     ]

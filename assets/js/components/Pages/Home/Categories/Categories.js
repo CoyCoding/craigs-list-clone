@@ -13,40 +13,33 @@ export default class Categories extends Component {
 	}
 
 	loadCategories = () => {
-		const testArray = [1, 2, 3, 4, 5, 6, 7];
-		return testArray.map((category, index) => {
-			return (
-				<div className="category-box" key={index}>
-					<div className={'title'}>community</div>
-					<div className="link-box">
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
-						<a href="#" className="link">
-							community
-						</a>
+		//if promise not resolved return loading
+		if (this.props.categoryInfo != '') {
+			//else loop categories dom nodes
+			return this.props.categoryInfo.map((category, index) => {
+				let loopListings = () => {
+					return category.listings.map((listing, index) => {
+						return (
+							<a
+								key={index}
+								href={`${category.title}/${listing.slug}`}
+								className="link"
+							>
+								{listing.name}
+							</a>
+						);
+					});
+				};
+				return (
+					<div className="category-box" key={index}>
+						<div className={'title'}>{category.title}</div>
+						<div className="link-box">{loopListings()}</div>
 					</div>
-				</div>
-			);
-		});
+				);
+			});
+		} else {
+			return 'loading...';
+		}
 	};
 
 	render() {

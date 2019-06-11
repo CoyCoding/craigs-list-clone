@@ -8,6 +8,9 @@ const app = express();
 
 //create middleware to handle the serving of the App
 app.use('/', serveStatic(path.join(__dirname, '/public')));
+app.get('/api/categories', function(req, res){
+  res.json(categoryData);
+});
 app.get('*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 })

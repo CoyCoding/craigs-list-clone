@@ -5,13 +5,29 @@ import ReactDOM from 'react-dom';
 import Categories from './Categories/Categories';
 import Trending from './Trending/Trending';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClock } from '@fortawesome/fontawesome-free-solid';
+import axios from 'axios';
 
 export default class Home extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			categoryData: ''
+		};
+	}
+
+	componentWillMount() {
+		const self = this;
+		axios
+			.get('/api/categories')
+			.then(function(res) {
+				console.log(res.data);
+				self.setState({
+					categoryData: res.data
+				});
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 	}
 
 	render() {
@@ -22,7 +38,7 @@ export default class Home extends Component {
 					<br />
 					Sail the Yard
 				</h1>
-				<Categories />
+				<Categories categoryInfo={this.state.categoryData} />
 				<Trending />
 			</div>
 		);
