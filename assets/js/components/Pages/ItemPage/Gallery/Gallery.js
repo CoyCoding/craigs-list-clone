@@ -18,10 +18,22 @@ function Gallery(props) {
 				<div className="slider">
 					<div
 						className="main-image"
-						style={{ backgroundImage: `url('${props.mainImgSrc}')` }}
+						style={{
+							backgroundImage: `url('${props.images[props.mainImgIndex]}')`
+						}}
 					>
-						<div className="left-arrow slide-selection">{'<'}</div>
-						<div className="right-arrow slide-selection">{'>'}</div>
+						<div
+							onClick={props.prevClick}
+							className="left-arrow slide-selection"
+						>
+							{'<'}
+						</div>
+						<div
+							onClick={props.nextClick}
+							className="right-arrow slide-selection"
+						>
+							{'>'}
+						</div>
 					</div>
 				</div>
 				<Thumbnails loadImages={loadImages} />

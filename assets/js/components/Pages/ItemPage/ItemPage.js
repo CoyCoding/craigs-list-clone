@@ -32,8 +32,26 @@ export default class ItemPage extends Component {
 	}
 
 	nextClick = () => {
+		let newIndex = 0;
+		//if current index + 1 would be out of bounds loop back to start
+		if (this.state.currentIndex !== this.state.item.imgs.length - 1) {
+			newIndex = this.state.currentIndex + 1;
+		}
 		this.setState({
-			mainImgSrc: 'yes'
+			currentIndex: newIndex
+		});
+	};
+
+	prevClick = () => {
+		let newIndex = 0;
+		//if current index - 1 would be negative loop to end
+		if (this.state.currentIndex === 0) {
+			newIndex = this.state.item.imgs.length - 1;
+		} else {
+			newIndex = this.state.currentIndex - 1;
+		}
+		this.setState({
+			currentIndex: newIndex
 		});
 	};
 
@@ -44,7 +62,9 @@ export default class ItemPage extends Component {
 				<div className="item-page-grid">
 					<Gallery
 						images={this.state.item.imgs}
-						mainImgSrc={this.state.mainImgSrc}
+						mainImgIndex={this.state.currentIndex}
+						nextClick={this.nextClick}
+						prevClick={this.prevClick}
 					/>
 					<div className="details-row">
 						<div className="item-header">
