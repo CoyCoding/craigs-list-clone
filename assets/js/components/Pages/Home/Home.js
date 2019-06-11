@@ -13,7 +13,7 @@ export default class Home extends Component {
 		};
 	}
 
-	componentWillMount() {}
+	componentDidMount() {}
 
 	render() {
 		return (

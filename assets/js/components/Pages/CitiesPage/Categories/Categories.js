@@ -12,16 +12,16 @@ export default class Categories extends Component {
 
 	loadCategories = () => {
 		//if promise not resolved return loading
-		if (this.props.categoryInfo != '') {
+		if (this.props.categoryData != '') {
 			//else loop categories mount each category node
-			return this.props.categoryInfo.map((category, index) => {
+			return this.props.categoryData.map((category, index) => {
 				//for each listing in current category mount listings
 				let loopListings = () => {
 					return category.listings.map((listing, index) => {
 						return (
 							<a
 								key={index}
-								href={`${this.props.city}/${category.title}/${listing.slug}`}
+								href={`${category.title}/${listing.slug}`}
 								className="link"
 							>
 								{listing.name}

@@ -16,32 +16,35 @@ export default class CitiesPage extends Component {
 		};
 	}
 
-	componentwillReciveprops(props) {
-		this.setState({ city: props.match.params.city });
-	}
-
 	componentWillMount() {
 		const self = this;
-		console.log(self.props);
-		self.props.selectedCity(self.props.match.params.city);
-		axios
-			.get('/api/categories')
-			.then(function(res) {
-				self.setState({
-					categoryData: res.data
-				});
-			})
-			.catch(function(error) {
-				console.log(error);
-			});
+		//set the state of the current city
+		self.setState(
+			{
+				city: self.props.match.params.city
+			},
+			() => {
+				//then used parent prop selectedCity to set the selectedCity in the parent for the header
+				self.props.selectedCity(this.state.city);
+				axios
+					.get(`/api/${this.state.city}/categories`)
+					.then(function(res) {
+						self.setState({
+							categoryData: res.data
+						});
+					})
+					.catch(function(error) {
+						console.log(error);
+					});
+			}
+		);
 	}
 
 	render() {
-		const { match, location, history } = this.props;
 		return (
 			<div id={'home-container'}>
 				<Categories
-					categoryInfo={this.state.categoryData}
+					categoryData={this.state.categoryData}
 					city={this.state.city}
 				/>
 				<Trending city={this.state.city} />

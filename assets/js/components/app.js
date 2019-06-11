@@ -19,14 +19,9 @@ export default class App extends Component {
 	}
 
 	selectedCity = selectedCity => {
-		this.setState(
-			{
-				city: selectedCity
-			},
-			() => {
-				console.log(this.state);
-			}
-		);
+		this.setState({
+			city: selectedCity
+		});
 	};
 
 	render() {
