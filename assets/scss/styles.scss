@@ -17,9 +17,10 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   line-height: 1;
-      text-shadow: #3f3f3f8a 0 0 10px;
+  text-shadow: #3f3f3f8a 0 0 10px;
   .body{
     padding-top: 77px;
+        min-height: 100vh;
     span{
       font-size: 5rem;
       color: white;

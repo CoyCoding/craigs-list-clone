@@ -2,15 +2,14 @@
   margin: 0 auto;
   max-width: 1240px;
   background: whitesmoke;
-  min-height: calc(100vh - 77px);
-
+  margin-top: 20px;
   .item-page-grid {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     width: 100%;
-
+        min-height: calc(100vh - 118px);
     .media-row {
       width: 100%;
 
@@ -113,7 +112,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        border: solid #1b2665;
 
         div {
           margin-right: 20px;
@@ -153,9 +151,11 @@
         padding: 20px;
         background: gainsboro;
         display: grid;
+
+    background: #f6f6f6;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
-
+            box-shadow: #cccccc 0 0 4px;
         .info-item {
           .info-title {
             font-weight: 600;
@@ -172,7 +172,6 @@
 
       .description {
         padding: 20px;
-        border: solid #1b2665;
       }
     }
   }
