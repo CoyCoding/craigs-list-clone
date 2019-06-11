@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 // import update from 'immutability-helper';
 // var classNames = require('classnames');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 function Gallery(props) {
 	const loadImages = () => {
 		console.log(props);
 		const slugs = props.images;
 		return slugs.map((slug, index) => {
-			return <img key={index} src={slug} className="thumb-img" />;
+			return (
+				<img
+					key={index}
+					src={slug}
+					onClick={props.thumbnailsClick.bind(null, index)}
+					className="thumb-img"
+				/>
+			);
 		});
 	};
+
 	return (
 		<div className="media-row">
 			<div className="gallery">
@@ -26,13 +33,13 @@ function Gallery(props) {
 							onClick={props.prevClick}
 							className="left-arrow slide-selection"
 						>
-							{'<'}
+							<FontAwesomeIcon icon="chevron-left" />
 						</div>
 						<div
 							onClick={props.nextClick}
 							className="right-arrow slide-selection"
 						>
-							{'>'}
+							<FontAwesomeIcon icon="chevron-right" />
 						</div>
 					</div>
 				</div>

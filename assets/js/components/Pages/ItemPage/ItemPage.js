@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 // import update from 'immutability-helper';
 // var classNames = require('classnames');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import Gallery from './Gallery/Gallery';
 
 export default class ItemPage extends Component {
@@ -15,6 +14,7 @@ export default class ItemPage extends Component {
 			currentIndex: 0
 		};
 	}
+
 	componentWillMount() {
 		const newItem = {
 			imgs: [
@@ -55,6 +55,12 @@ export default class ItemPage extends Component {
 		});
 	};
 
+	thumbnailsClick = index => {
+		this.setState({
+			currentIndex: index
+		});
+	};
+
 	render() {
 		const { match, location, history } = this.props;
 		return (
@@ -65,6 +71,7 @@ export default class ItemPage extends Component {
 						mainImgIndex={this.state.currentIndex}
 						nextClick={this.nextClick}
 						prevClick={this.prevClick}
+						thumbnailsClick={this.thumbnailsClick}
 					/>
 					<div className="details-row">
 						<div className="item-header">
