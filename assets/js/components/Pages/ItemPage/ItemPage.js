@@ -4,42 +4,48 @@ import ReactDOM from 'react-dom';
 // var classNames = require('classnames');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import Gallery from './Gallery/Gallery';
 
 export default class ItemPage extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			item: '',
+			mainImgSrc: '',
+			currentIndex: 0
+		};
+	}
+	componentWillMount() {
+		const newItem = {
+			imgs: [
+				'https://static.carsdn.co/cldstatic/wp-content/uploads/img-672890494-1551980882647.jpg',
+				'https://images.craigslist.org/00i0i_X7e0VP6gh4_600x450.jpg',
+				'https://images.craigslist.org/00r0r_1kbEIlkRGqo_600x450.jpg',
+				'https://images.craigslist.org/00o0o_jdrVSyhHsSM_600x450.jpg',
+				'https://images.craigslist.org/01515_bPXIuclwiqH_600x450.jpg'
+			]
+		};
+		this.setState({
+			item: newItem,
+			mainImgSrc: newItem.imgs[0]
+		});
 	}
 
-	loadImages = () => {
-		const imgSlugs = [1, 2, 3, 4, 5, 6, 7, 8];
-		return imgSlugs.map((slug, index) => {
-			return (
-				<img
-					key={index}
-					src="https://static.carsdn.co/cldstatic/wp-content/uploads/img-672890494-1551980882647.jpg"
-					className="thumb-img"
-				/>
-			);
+	nextClick = () => {
+		this.setState({
+			mainImgSrc: 'yes'
 		});
 	};
 
 	render() {
 		const { match, location, history } = this.props;
 		return (
-			<div id={'listings-container'}>
-				<section>
-					<div className="media-row">
-						<div className="gallery">
-							<div className="slider">
-								<div className="main-image">
-									<div className="left-arrow slide-selection">{'<'}</div>
-									<div className="right-arrow slide-selection">{'>'}</div>
-								</div>
-							</div>
-							<Thumbnails loadImages={this.loadImages} />
-						</div>
-					</div>
+			<section id={'item-container'}>
+				<div className="item-page-grid">
+					<Gallery
+						images={this.state.item.imgs}
+						mainImgSrc={this.state.mainImgSrc}
+					/>
 					<div className="details-row">
 						<div className="item-header">
 							<div>
@@ -79,12 +85,8 @@ export default class ItemPage extends Component {
 							<p>lorem ipsum this is the paragraph of info</p>
 						</div>
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 		);
 	}
 }
-
-const Thumbnails = props => {
-	return <div className="thumbnails">{props.loadImages()}</div>;
-};

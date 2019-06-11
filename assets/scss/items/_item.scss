@@ -1,5 +1,9 @@
-#listings-container {
-  section {
+#item-container {
+  margin: 0 auto;
+  max-width: 1240px;
+  background: whitesmoke;
+  min-height: calc(100vh - 77px);
+  .item-page-grid {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -95,7 +99,9 @@ cursor: pointer;
         align-items: center;
         padding: 10px;
         border: solid #1b2665;
+
         div{
+          margin-right: 20px;
           h6{
             color: grey;
           }
@@ -118,6 +124,7 @@ cursor: pointer;
           stroke-dasharray: 2,2;
           stroke-linejoin: round;
           cursor: pointer;
+              align-self: flex-start;
           &.favorited{
             color: gold;
           }
