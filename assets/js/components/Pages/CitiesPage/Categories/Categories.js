@@ -20,7 +20,7 @@ export default class Categories extends Component {
 						return (
 							<a
 								key={index}
-								href={`${category.title}/${listing.slug}`}
+								href={`${this.props.city}/${category.title}/${listing.slug}`}
 								className="link"
 							>
 								{listing.name}

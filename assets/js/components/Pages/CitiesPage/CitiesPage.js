@@ -11,8 +11,12 @@ export default class CitiesPage extends Component {
 	constructor() {
 		super();
 		this.state = {
-			categoryData: ''
+			categoryData: '',
+			city: ''
 		};
+	}
+	componentwillReciveprops(props) {
+		this.setState({ city: props.match.params.city });
 	}
 	componentWillMount() {
 		const self = this;
