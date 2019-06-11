@@ -16,7 +16,7 @@ export default class Header extends Component {
 				<div className={'left-menu'}>
 					<div className={'logo'}>GraigsList</div>
 					<div className={'city-dropdown'}>
-						St. Louis
+						{this.props.city}
 						<FontAwesomeIcon name={'chevron-down'} />
 					</div>
 				</div>

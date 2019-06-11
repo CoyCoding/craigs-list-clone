@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 // import update from 'immutability-helper';
 // var classNames = require('classnames');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClock } from '@fortawesome/fontawesome-free-solid';
 
 export default class Categories extends Component {
 	constructor() {

@@ -13,16 +13,35 @@ import ItemPage from './Pages/ItemPage/ItemPage';
 export default class App extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			city: ''
+		};
 	}
+
+	selectedCity = selectedCity => {
+		this.setState(
+			{
+				city: selectedCity
+			},
+			() => {
+				console.log(this.state);
+			}
+		);
+	};
 
 	render() {
 		return (
 			<Router>
-				<Header />
+				<Header city={this.state.city} />
 				<div className="body">
 					<Route exact path="/" component={Home} />
-					<Route exact path="/:city" component={CitiesPage} />
+					<Route
+						exact
+						path="/:city"
+						render={props => (
+							<CitiesPage {...props} selectedCity={this.selectedCity} />
+						)}
+					/>
 					<Route exact path="/:city/:category" component={CategoriesPage} />
 					<Route
 						exact
