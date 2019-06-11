@@ -29,18 +29,18 @@ function Gallery(props) {
 							backgroundImage: `url('${props.images[props.mainImgIndex]}')`
 						}}
 					>
-						<div
+						<span
 							onClick={props.prevClick}
 							className="left-arrow slide-selection"
 						>
 							<FontAwesomeIcon icon="chevron-left" />
-						</div>
-						<div
+						</span>
+						<span
 							onClick={props.nextClick}
 							className="right-arrow slide-selection"
 						>
 							<FontAwesomeIcon icon="chevron-right" />
-						</div>
+						</span>
 					</div>
 				</div>
 				<Thumbnails loadImages={loadImages} />

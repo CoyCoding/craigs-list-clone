@@ -3,6 +3,7 @@
   max-width: 1240px;
   background: whitesmoke;
   min-height: calc(100vh - 77px);
+
   .item-page-grid {
     padding: 20px;
     display: grid;
@@ -20,45 +21,57 @@
         flex-direction: column;
 
         .slider {
-              margin-bottom: 20px;
+          margin-bottom: 20px;
+
           .main-image {
             width: 100%;
-            background: url('https://static.carsdn.co/cldstatic/wp-content/uploads/img-672890494-1551980882647.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             height: 400px;
             display: flex;
-justify-content: space-between;
-            &:after{
+            justify-content: space-between;
+            overflow: hidden;
 
+            &:hover {
+              .left-arrow {
+
+                  transform: translateX(0%) !important;
+                }
+                .right-arrow {
+
+                    transform: translateX(0%) !important;
+                }
             }
-            .slide-selection{
+
+
+            .slide-selection {
               height: 100%;
-                  display: flex;
-                  align-items: center;
-                  color: white;
-                  background: #000000a8;
-
-font-weight: 500;
-font-size: 1.5rem;
-cursor: pointer;
-    padding: 0px 5px;
-    transition: padding 1s ease-in-out;
+              display: flex;
+              align-items: center;
+              color: white;
+              background: #000000a8;
+              font-weight: 500;
+              font-size: 1.5rem;
+              cursor: pointer;
+              padding: 0 5px;
+              transition: padding 0.5s ease-in-out;
+              -moz-user-select: none;
+              -khtml-user-select: none;
+              -webkit-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
               &.left-arrow {
-                &:hover{
-                  padding: 0 15px;
+                padding: 0 20px;
+                  transform: translateX(-100%);
+                  transition: transform .5s ease-in-out;
                 }
-              }
-              &.right-arrow {
-                &:hover{
-                  padding: 0 15px;
+                &.right-arrow {
+                  padding: 0 20px;
+                    transform: translateX(100%);
+                    transition: transform .5s ease-in-out;
                 }
-
-              }
             }
-
-
 
           }
         }
@@ -94,64 +107,72 @@ cursor: pointer;
 
     .details-row {
       width: 100%;
-      .item-header{
+
+      .item-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px;
         border: solid #1b2665;
 
-        div{
+        div {
           margin-right: 20px;
-          h6{
+
+          h6 {
             color: grey;
           }
-          h3{
+
+          h3 {
             font-size: 2rem;
             margin-top: 10px;
           }
-          h4{
-            font-size: 1.5rem;
-              margin-top: 10px;
-          }
 
+          h4 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+          }
         }
-        .fa-star{
+
+        .fa-star {
           font-size: 2rem;
           color: white;
-          /* text-shadow: black 2px 11px 20px; */
           stroke: #646464;
           stroke-width: 25px;
           stroke-dasharray: 2,2;
           stroke-linejoin: round;
           cursor: pointer;
-              align-self: flex-start;
-          &.favorited{
+          align-self: flex-start;
+
+          &.favorited {
             color: gold;
           }
         }
       }
-      .info-grid{
+
+      .info-grid {
         padding: 20px;
-    background: gainsboro;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-        .info-item{
-          .info-title{
+        background: gainsboro;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        .info-item {
+          .info-title {
             font-weight: 600;
-            letter-spacing: .1rem;
+            letter-spacing: 0.1rem;
             text-transform: uppercase;
           }
-          .info{
+
+          .info {
             margin-top: 5px;
-                color: grey;
+            color: grey;
           }
         }
       }
-      .description{
+
+      .description {
         padding: 20px;
-    border: solid #1b2665;
+        border: solid #1b2665;
       }
     }
   }
