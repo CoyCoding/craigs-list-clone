@@ -31,13 +31,9 @@ module.exports = [
         slug: 'groups'
       },
       {
-        name: 'pets',
-        slug: 'pets'
-      },
-      {
         name: 'events',
         slug: 'events'
-      },
+      }
     ]
   },
   {
@@ -74,11 +70,7 @@ module.exports = [
       {
         name: 'rooms wanted',
         slug: 'rooms-wanted'
-      },
-      {
-        name: 'vacation rentals',
-        slug: 'vacation-rentals'
-      },
+      }
     ]
   },
   {
@@ -112,14 +104,11 @@ module.exports = [
         name: 'labor',
         slug: 'labor'
       },
-      {
-        name: 'legal',
-        slug: 'legal'
-      },
+
       {
         name: 'pet',
         slug: 'pet'
-      },
+      }
     ]
   },
   {
@@ -153,14 +142,11 @@ module.exports = [
         name: 'boats',
         slug: 'boats'
       },
-      {
-        name: 'books',
-        slug: 'books'
-      },
+
       {
         name: 'cars & trucks',
         slug: 'cars-trucks'
-      },
+      }
     ]
   },
   {
@@ -187,10 +173,6 @@ module.exports = [
         slug: 'jokes'
       },
       {
-        name: 'legal',
-        slug: 'legal'
-      },
-      {
         name: 'haiku',
         slug: 'haiku'
       },
@@ -201,7 +183,7 @@ module.exports = [
       {
         name: 'tv',
         slug: 'tv'
-      },
+      }
     ]
   },
   {
@@ -228,10 +210,6 @@ module.exports = [
         slug: 'parking-storage'
       },
       {
-        name: 'security',
-        slug: 'security'
-      },
-      {
         name: 'sales',
         slug: 'sales'
       },
@@ -255,10 +233,6 @@ module.exports = [
       {
         name: 'labor',
         slug: 'labor'
-      },
-      {
-        name: 'event',
-        slug: 'event'
       },
       {
         name: 'creative',
