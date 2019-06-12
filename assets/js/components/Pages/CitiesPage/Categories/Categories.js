@@ -5,36 +5,44 @@ import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Categories(props) {
-	const loadCategories = () => {
-		//if categoryData promise not resolved return loading
-		if (props.categoryData != '') {
-			//else loop categories mount each category node
-			return props.categoryData.map((category, index) => {
-				//for each listing in current category mount listings
-				let loopListings = () => {
-					return category.listings.map((listing, index) => {
-						return (
-							<a
-								key={index}
-								href={`${category.title}/${listing.slug}`}
-								className="link"
-							>
-								{listing.name}
-							</a>
-						);
-					});
-				};
-				return (
-					<div className="category-box" key={index}>
-						<div className={'title'}>{category.title}</div>
-						<div className="link-box">{loopListings()}</div>
-					</div>
-				);
-			});
-		} else {
-			return 'loading...';
-		}
-	};
-
-	return <section id={'categories'}>{loadCategories()}</section>;
+	if (props.categoryData != '') {
+		return <CategorySection categoryData={props.categoryData} />;
+	} else {
+		return 'loading...';
+	}
 }
+
+//loops through and creates each CategoryLink
+const listingLoop = (category, index) => {
+	return category.listings.map((listing, index) => {
+		return <CategoryLink key={index} category={category} listing={listing} />;
+	});
+};
+
+//Returns a Link for a listing in the category
+const CategoryLink = props => {
+	return (
+		<a href={`${props.category.title}/${props.listing.slug}`} className="link">
+			{props.listing.name}
+		</a>
+	);
+};
+
+//loops through and creates each CategorySection
+const categoryLoop = categoryData => {
+	return categoryData.map((category, index) => {
+		return (
+			<div key={index} className="category-box">
+				<div className={'title'}>{category.title}</div>
+				<div className="link-box">{listingLoop(category, index)}</div>
+			</div>
+		);
+	});
+};
+
+//returns the category section complete
+const CategorySection = props => {
+	return (
+		<section id={'categories'}>{categoryLoop(props.categoryData)}</section>
+	);
+};

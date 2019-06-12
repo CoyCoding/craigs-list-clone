@@ -10,22 +10,22 @@ const app = express();
 //create middleware to handle the serving of the App
 app.use('/', serveStatic(path.join(__dirname, '/public')));
 
-//api
+//api returns json of all cities
 app.get('/api/:cities', function(req, res){
   res.json(cityData);
 });
 
-//api
+//api returns all Categories for a city
 app.get('/api/:cities/:categories', function(req, res){
   res.json(categoryData);
 });
 
-//api
+//api returns all listings(items) from category in a city
 app.get('/api/:cities/:categories/:listings/', function(req, res){
   res.json(categoryData);
 });
 
-//api
+//api returns the selected item from listing
 app.get('/api/:cities/:categories/:listings/:items', function(req, res){
   res.json(itemData);
 });
