@@ -4,17 +4,12 @@ import ReactDOM from 'react-dom';
 // var classNames = require('classnames');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default class Categories extends Component {
-	constructor() {
-		super();
-		this.state = {};
-	}
-
-	loadCategories = () => {
-		//if promise not resolved return loading
-		if (this.props.categoryData != '') {
+export default function Categories(props) {
+	const loadCategories = () => {
+		//if categoryData promise not resolved return loading
+		if (props.categoryData != '') {
 			//else loop categories mount each category node
-			return this.props.categoryData.map((category, index) => {
+			return props.categoryData.map((category, index) => {
 				//for each listing in current category mount listings
 				let loopListings = () => {
 					return category.listings.map((listing, index) => {
@@ -41,7 +36,5 @@ export default class Categories extends Component {
 		}
 	};
 
-	render() {
-		return <section id={'categories'}>{this.loadCategories()}</section>;
-	}
+	return <section id={'categories'}>{loadCategories()}</section>;
 }

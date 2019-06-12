@@ -2,7 +2,8 @@ const express = require('express');
 const serveStatic = require('serve-static');
 const path = require('path');
 const categoryData = require('./data/categories.js');
-const cityData = require('./data/cities.js')
+const cityData = require('./data/cities.js');
+const itemData = require('./data/items.js');
 //create the express App
 const app = express();
 
@@ -26,7 +27,7 @@ app.get('/api/:cities/:categories/:listings/', function(req, res){
 
 //api
 app.get('/api/:cities/:categories/:listings/:items', function(req, res){
-  res.json(categoryData);
+  res.json(itemData);
 });
 
 
